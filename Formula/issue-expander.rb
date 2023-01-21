@@ -3,10 +3,10 @@ class IssueExpander < Formula
 
   desc "Expand GitHub issue references into Markdown links"
   homepage "https://www.github.com/adamwolf/issue-expander"
-  version "0.1.8"
 
-  url "https://files.pythonhosted.org/packages/7b/59/aa93cfb2295b3afaed58197583970b0724f7bef7e2f665103056e009d574/issue_expander-0.1.8.tar.gz"
-  sha256 "2a061bcba86ab74ccef89653e157411209eefccaa4ff8d49ee02c132e3afb4da"
+  version "0.1.9"
+  url "https://files.pythonhosted.org/packages/1c/82/97e0edf9cbc77cd86bb0663402f9e1d569b03cc915cd99fa64d1f9dd004b/issue_expander-0.1.9.tar.gz"
+  sha256 "4758377ba73a8da517557dac4b9836ea19fb9882ea7744898503ba1697cc84ee"
 
   depends_on "python3"
 
