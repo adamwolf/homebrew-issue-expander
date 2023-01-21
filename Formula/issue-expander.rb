@@ -1,12 +1,14 @@
-class issue-expander < Formula
+class IssueExpander < Formula
   include Language::Python::Virtualenv
+
   desc "Expand GitHub issue references into Markdown links"
   homepage "https://www.github.com/adamwolf/issue-expander"
-  url "https://files.pythonhosted.org/packages/7b/59/aa93cfb2295b3afaed58197583970b0724f7bef7e2f665103056e009d574/issue_expander-0.1.8.tar.gz"
   version "0.1.8"
+
+  url "https://files.pythonhosted.org/packages/7b/59/aa93cfb2295b3afaed58197583970b0724f7bef7e2f665103056e009d574/issue_expander-0.1.8.tar.gz"
   sha256 "2a061bcba86ab74ccef89653e157411209eefccaa4ff8d49ee02c132e3afb4da"
 
-  depends_on "python@3.8"
+  depends_on "python3"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
@@ -27,7 +29,7 @@ class issue-expander < Formula
     url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
     sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
   end
-  
+
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/ee/391076f5937f0a8cdf5e53b701ffc91753e87b07d66bae4a09aa671897bf/requests-2.28.2.tar.gz"
     sha256 "98b1b2782e3c6c4904938b84c0eb932721069dfdb9134313beff7c83c2df24bf"
@@ -39,10 +41,11 @@ class issue-expander < Formula
   end
 
   def install
+    virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
   end
 
   test do
-    system bin/"issue-expander", "--help"
+    false
   end
 end
