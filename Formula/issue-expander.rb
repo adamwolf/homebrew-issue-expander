@@ -7,6 +7,13 @@ class IssueExpander < Formula
   url "https://files.pythonhosted.org/packages/c1/6a/f6854e1083a4d3bf54b383cce668963b1d33f156e3ae3329fd0d1771a371/issue_expander-0.1.10.tar.gz"
   sha256 "c26c0d218d2752ac93cf2b1a017c7f05a5fbe53c1b7a32e15fb6c4cd9bc8213c"
 
+  bottle do
+    root_url "https://github.com/adamwolf/homebrew-issue-expander/releases/download/issue-expander-0.1.10"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, monterey:     "6edfec40948e92544706af3b32cb6902015313b450f3f46e3aa3d9dbbb831e69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fca3258e70ba9891bf7a220f5962a9afcfad52ae771490ce068321e29b429a9b"
+  end
+
   depends_on "python3"
 
   resource "certifi" do
