@@ -45,6 +45,8 @@ class IssueExpander < Formula
   end
 
   test do
-    false
+    (testpath/"input").write "adamwolf/homebrew-issue-expander#3"
+    assert_match("[Add test to brew formula #3](https://github.com/adamwolf/homebrew-issue-expander/issues/3)",
+                 shell_output("#{bin}/issue-expander input"))
   end
 end
