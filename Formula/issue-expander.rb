@@ -8,10 +8,9 @@ class IssueExpander < Formula
   sha256 "662087a679306983c33b5573e719f8bc353f2047c9b9125507ddc320953ab7f4"
 
   bottle do
-    root_url "https://github.com/adamwolf/homebrew-issue-expander/releases/download/issue-expander-0.1.10"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey:     "6edfec40948e92544706af3b32cb6902015313b450f3f46e3aa3d9dbbb831e69"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fca3258e70ba9891bf7a220f5962a9afcfad52ae771490ce068321e29b429a9b"
+    root_url "https://github.com/adamwolf/homebrew-issue-expander/releases/download/issue-expander-0.1.12"
+    sha256 cellar: :any_skip_relocation, monterey:     "c83a444e3a60071f65babeeca4ab395532818f6b2d270186f2c38dcadf947463"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0ffc3a1019b60d498313956e4f5fc854c70105a6258aa25ea4e00dbf2cacb692"
   end
 
   depends_on "python3"
